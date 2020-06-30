@@ -1,6 +1,8 @@
 import { startOfHour } from 'date-fns';
 import { getCustomRepository } from 'typeorm';
 
+import AppError from '../errors/AppError';
+
 import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
@@ -26,7 +28,7 @@ class CreateAppointmentService {
 
     //tratativa de erros/excessoes: caso a data não estiver disponive, ou seja ja existir um appointment com a data retornar erro
     if (findAppointmentInSameDate) {
-      throw Error('This appointment is already booked');
+      throw new AppError('This appointment is already booked');
     }
 
     //Criando o objeto do appointment
