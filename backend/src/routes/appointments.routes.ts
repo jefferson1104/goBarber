@@ -24,29 +24,22 @@ appointmentsRouter.get('/', async (request, response) => {
 //Rota responsavel por criar appointments
 appointmentsRouter.post('/', async (request, response) => {
 
-  //tratativa de erro com try/cacth, pegando mensagem de erro do service
-  try {
-    //pegando dados do usuario para criar appointmentS
-    const { provider_id, date } = request.body;
+   //pegando dados do usuario para criar appointmentS
+   const { provider_id, date } = request.body;
 
-    //tratando a data que recebemos nos dados antes de passar para o objeto
-    const parsedDate = parseISO(date);//transforma a string em data (objeto Date)
+   //tratando a data que recebemos nos dados antes de passar para o objeto
+   const parsedDate = parseISO(date);//transforma a string em data (objeto Date)
 
-    const CreateAppointment = new CreateAppointmentService();
+   const CreateAppointment = new CreateAppointmentService();
 
-    const appointment = await CreateAppointment.execute({
-      date: parsedDate,
-      provider_id
-    });
+   const appointment = await CreateAppointment.execute({
+     date: parsedDate,
+     provider_id
+   });
 
-    //resutlado do appointment
-    return response.json(appointment);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
-
+   //resutlado do appointment
+   return response.json(appointment);
 });
-
 
 export default appointmentsRouter;
 

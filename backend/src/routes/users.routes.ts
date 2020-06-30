@@ -12,26 +12,21 @@ const upload = multer(uploadConfig);
 
 //Rota para criação usuario
 usersRouter.post('/', async (request, response) => {
-  try {
-    const { name, email, password } = request.body;
+  const { name, email, password } = request.body;
 
-    //instanciando sevice
-    const createUser = new CreateUserService();
+  //instanciando sevice
+  const createUser = new CreateUserService();
 
-    const user = await createUser.execute({
-      name,
-      email,
-      password,
-    });
+  const user = await createUser.execute({
+    name,
+    email,
+    password,
+  });
 
-    delete user.password;
+  delete user.password;
 
-    //retornando usuario que foi criado
-    return response.json(user);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
-
+   //retornando usuario que foi criado
+   return response.json(user);
 });
 
 //Rota para alteração de avatar do usuario
@@ -40,21 +35,16 @@ usersRouter.patch(
   ensureAuthenticated,
   upload.single('avatar'),
   async (request, response) => {
-    try {
-      const updateUserAvatar = new UpdateUserAvatarService();
+    const updateUserAvatar = new UpdateUserAvatarService();
 
-      const user = await updateUserAvatar.execute({
-        user_id: request.user.id,
-        avatarFilename: request.file.filename,
-      });
+    const user = await updateUserAvatar.execute({
+      user_id: request.user.id,
+      avatarFilename: request.file.filename,
+    });
 
-      delete user.password;
+    delete user.password;
 
-      return response.json(user);
-
-    } catch (err) {
-      return response.status(400).json({ error: err.message });
-    }
+    return response.json(user);
   },
 );
 
