@@ -22,7 +22,7 @@ appointmentsRouter.post('/', async (request, response) => {
   //tratativa de erro com try/cacth, pegando mensagem de erro do service
   try {
     //pegando dados do usuario para criar appointmentS
-    const { provider, date } = request.body;
+    const { provider_id, date } = request.body;
 
     //tratando a data que recebemos nos dados antes de passar para o objeto
     const parsedDate = parseISO(date);//transforma a string em data (objeto Date)
@@ -31,7 +31,7 @@ appointmentsRouter.post('/', async (request, response) => {
 
     const appointment = await CreateAppointment.execute({
       date: parsedDate,
-      provider
+      provider_id
     });
 
     //resutlado do appointment

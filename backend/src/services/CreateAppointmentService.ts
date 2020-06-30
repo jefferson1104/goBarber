@@ -7,14 +7,14 @@ import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
 //DTO - Data Transfer Object (recebendo informações)
 interface Request {
-  provider: string;
+  provider_id: string;
   date: Date;
 }
 
 
 class CreateAppointmentService {
   //método execute, informa que esta criando um novo appointment
-  public async execute({date, provider}:Request): Promise<Appointment> {
+  public async execute({date, provider_id}:Request): Promise<Appointment> {
     const appointmentsRepository = getCustomRepository(AppointmentsRepository);
 
     const appointmentDate = startOfHour(date);//regra de negocio para que o agendamento so acontece de hora em hora
@@ -31,7 +31,7 @@ class CreateAppointmentService {
 
     //Criando o objeto do appointment
     const appointment = appointmentsRepository.create({
-      provider,
+      provider_id,
       date: appointmentDate,
     });
 
