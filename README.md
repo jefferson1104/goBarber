@@ -67,7 +67,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ## :zap: Executando o Projeto
 #### Clonando o projeto
 ```sh
-$ git clone https://github.com/jvictorfarias/gobarber.git
+$ git clone https://github.com/jefferson1104/goBarber.git
 $ cd gobarber
 ```
 #### Iniciando a API
@@ -99,5 +99,3 @@ $ yarn && yarn android && yarn start
 ### :memo: Licença
 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
-
-<p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com :purple_heart: by <strong> Joao Victor Farias</strong> </p>
