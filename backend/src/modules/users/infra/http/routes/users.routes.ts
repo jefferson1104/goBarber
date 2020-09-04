@@ -13,7 +13,6 @@ const userAvatarController =  new UserAvatarController();
 
 const upload = multer(uploadConfig);
 
-
 //Rota para criação usuario
 usersRouter.post('/', usersController.create);
 

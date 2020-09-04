@@ -27,6 +27,7 @@ class CreateUserService {
     //checando se ja existe unm usuario com o mesmo email
     const checkUserExists = await this.usersRepository.findByEmail(email);
 
+
     //mensagem de erro caso ja existir um usuario com o mesmo email
     if (checkUserExists) {
       throw new AppError('Email address already used.');
