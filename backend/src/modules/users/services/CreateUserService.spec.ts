@@ -5,16 +5,22 @@ import FakeProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 
 import CreateUserService from './CreateUserService';
 
+let fakeUsersRepository: FakeUsersRepository;
+let fakeProvider: FakeProvider;
+let createUser: CreateUserService;
+
 //teste para criar um usuario com um repositorio fake sem usar banco de dados
 describe('CreateUser', () => {
-  it('should be able to create a new user', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeProvider = new FakeProvider();
-    const createUser = new CreateUserService(
+  beforeEach(() => {
+    fakeUsersRepository = new FakeUsersRepository();
+    fakeProvider = new FakeProvider();
+    createUser = new CreateUserService(
       fakeUsersRepository,
       fakeProvider
     );
+  });
 
+  it('should be able to create a new user', async () => {
     const user =  await createUser.execute({
       name: 'John Doe',
       email: 'johndoe@example.com.br',
@@ -28,14 +34,6 @@ describe('CreateUser', () => {
 
   //teste para nao permitir criar um usuario o mesmo email
   it('should not be able to create a new user with same email from another', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeProvider = new FakeProvider();
-
-    const createUser = new CreateUserService(
-      fakeUsersRepository,
-      fakeProvider
-    );
-
     await createUser.execute({
       name: 'John Doe',
       email: 'johndoe@example.com.br',
