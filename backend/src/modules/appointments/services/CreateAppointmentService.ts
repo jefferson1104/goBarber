@@ -1,4 +1,4 @@
-import { startOfHour } from 'date-fns';
+import { startOfHour, isBefore, getHours } from 'date-fns';
 import { injectable, inject} from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
@@ -9,6 +9,7 @@ import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 //DTO - Data Transfer Object (recebendo informações)
 interface IRequest {
   provider_id: string;
+  user_id: string;
   date: Date;
 }
 
@@ -19,12 +20,26 @@ class CreateAppointmentService {
     private appointmentsRepository : IAppointmentsRepository,
   ) {}
 
-
-
   //método execute, informa que esta criando um novo appointment
-  public async execute({date, provider_id}: IRequest): Promise<Appointment> {
+  public async execute({ date, provider_id, user_id }: IRequest): Promise<Appointment> {
 
     const appointmentDate = startOfHour(date);//regra de negocio para que o agendamento so acontece de hora em hora
+
+    //verifica e nao permite criar um agendamento em data do passado
+    if (isBefore(appointmentDate, Date.now())) {
+      throw new AppError("You can't create an appointment on a past date.");
+    }
+
+    //verifica e nao permite um user criar um agendamento para ele mesmo como provider
+    if (user_id === provider_id) {
+      throw new AppError("You can't create an appointment whith yourself.");
+    }
+
+    //verifica e nao permite criar appointments antes das 8am e nem depois das 17pm
+    if (getHours(appointmentDate) < 8 || getHours(appointmentDate) > 17) {
+      throw new AppError("You can only create appointments between 8am and 5pm");
+    }
+
 
     //verifica se ja existe algum appointment com com a data recebida
     const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
@@ -39,6 +54,7 @@ class CreateAppointmentService {
     //Criando o objeto do appointment e salvando dados do objeto appointment no banco de dados
     const appointment = await this.appointmentsRepository.create({
       provider_id,
+      user_id,
       date: appointmentDate,
     });
 
