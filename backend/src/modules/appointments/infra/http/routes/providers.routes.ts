@@ -6,6 +6,7 @@ import ProviderMonthAvailabilityController from '../controllers/ProviderMonthAva
 import ProviderDayAvailabilityController from '../controllers/ProviderDayAvailabilityController';
 
 const providersRouter = Router();
+
 const providersController = new ProvidersController();
 const providerMonthAvailabilityController = new ProviderMonthAvailabilityController();
 const providerDayAvailabilityController = new ProviderDayAvailabilityController();
