@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { celebrate, Joi, Segments } from 'celebrate';
+
 import multer from 'multer';
 import uploadConfig from '@config/upload';
 
@@ -14,7 +16,17 @@ const userAvatarController =  new UserAvatarController();
 const upload = multer(uploadConfig);
 
 //Rota para criação usuario
-usersRouter.post('/', usersController.create);
+usersRouter.post(
+  '/',
+  celebrate({
+    [Segments.BODY]: {
+      name: Joi.string().required(),
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+    },
+  }),
+  usersController.create
+);
 
 //Rota para alteração de avatar do usuario
 usersRouter.patch(
