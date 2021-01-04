@@ -2,21 +2,25 @@ import AppError from '@shared/errors/AppError';
 
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import FakeProvider from '../providers/HashProvider/fakes/FakeHashProvider';
+import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 
 import CreateUserService from './CreateUserService';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeProvider: FakeProvider;
 let createUser: CreateUserService;
+let fakeCacheProvider: FakeCacheProvider;
 
 //teste para criar um usuario com um repositorio fake sem usar banco de dados
 describe('CreateUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeProvider = new FakeProvider();
+    fakeCacheProvider = new FakeCacheProvider();
     createUser = new CreateUserService(
       fakeUsersRepository,
-      fakeProvider
+      fakeProvider,
+      fakeCacheProvider
     );
   });
 
