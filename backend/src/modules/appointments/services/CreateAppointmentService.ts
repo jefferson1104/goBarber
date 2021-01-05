@@ -30,7 +30,6 @@ class CreateAppointmentService {
 
   //método execute, informa que esta criando um novo appointment
   public async execute({ date, provider_id, user_id }: IRequest): Promise<Appointment> {
-
     const appointmentDate = startOfHour(date);//regra de negocio para que o agendamento so acontece de hora em hora
 
     //verifica e nao permite criar um agendamento em data do passado
@@ -48,10 +47,10 @@ class CreateAppointmentService {
       throw new AppError("You can only create appointments between 8am and 5pm");
     }
 
-
     //verifica se ja existe algum appointment com com a data recebida
     const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
-      appointmentDate
+      appointmentDate,
+      provider_id,
     );
 
     //tratativa de erros/excessoes: caso a data não estiver disponive, ou seja ja existir um appointment com a data retornar erro
