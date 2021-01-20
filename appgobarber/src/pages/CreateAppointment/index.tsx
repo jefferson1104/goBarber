@@ -1,13 +1,13 @@
 /* eslint-disable camelcase */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
-import { Platform, Alert } from 'react-native';
 import { format } from 'date-fns';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-import { useAuth } from '../../hooks/auth';
+import { useRoute, useNavigation } from '@react-navigation/native';
+import { Alert, Platform } from 'react-native';
 import api from '../../services/api';
+import { useAuth } from '../../hooks/auth';
 
 import {
   Container,
@@ -122,6 +122,8 @@ const CreateAppointment: React.FC = () => {
       date.setHours(selectedHour);
       date.setMinutes(0);
 
+      console.log(selectedHour);
+
       await api.post('appointments', {
         provider_id: selectedProvider,
         date,
@@ -134,7 +136,7 @@ const CreateAppointment: React.FC = () => {
         'Ocorreu um erro ao tentar criar o agendamento, tente novamente',
       );
     }
-  }, [navigate, setSelectedDate, selectedHour, selectedProvider]);
+  }, [selectedProvider, selectedDate, selectedHour, navigate]);
 
   const morningAvailability = useMemo(() => {
     return availability
