@@ -55,6 +55,23 @@ $ git push origin minha-branch
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
+#### 🎨 Screenshots
+
+<p align="center">
+  <img width=500 src="./assets/images/screenshots/screenshot_web_01.png">
+  <img width=500 src="./assets/images/screenshots/screenshot_web_02.png">
+  <img width=500 src="./assets/images/screenshots/screenshot_web_03.png">
+  <img width=500 src="./assets/images/screenshots/screenshot_web_04.png">
+</p>
+
+<p align="center">
+  <img width=150 src="./assets/images/screenshots/screenshot_mobile_01.png">
+  <img width=150 src="./assets/images/screenshots/screenshot_mobile_02.png">
+  <img width=150 src="./assets/images/screenshots/screenshot_mobile_03.png">
+  <img width=150 src="./assets/images/screenshots/screenshot_mobile_04.png">
+  <img width=150 src="./assets/images/screenshots/screenshot_mobile_05.png">
+</p>
+
 ### :memo: Licença
 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.

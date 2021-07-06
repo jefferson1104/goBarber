@@ -1,6 +1,6 @@
-### EXECUTANDO PROJETO LOCALMENTE
+# EXECUTANDO PROJETO LOCALMENTE
 
-##### Backend (API)
+## Backend (API)
 
 Dentro do projeto, já existe um arquivo _docker-compose.yml_ que possui tudo 3 containers **Docker**, um container com o banco de dados **PostgresSQL**, um container com banco de dados **MongoDB** e outro container com o banco de dados para cache **Redis**, basta ter o Docker instalado em sua máquina.
 
@@ -29,7 +29,7 @@ $ yarn dev:server
 
 > **NOTA**: Se os containers não iniciarem ou voce tenha que executar novamente o projeto local, execute os comandos a seguir para inciar os containers, `$ sudo docker start posgtres`, `$ sudo docker start mongodb`, `$ sudo docker start redis`.
 
-##### Frontend (WEB)
+## Frontend (WEB)
 
 Para iniciar o app goBarber na versão frontend (WEB) você preciso primeiro ter iniciado o backend (API) do projeto, certificando que a api esta em pleno funcionamento siga as instruções abaixo:
 
@@ -44,7 +44,7 @@ $ yarn
 $ yarn start
 ```
 
-##### Mobile (APP)
+## Mobile (APP)
 
 Para iniciar o aplicativo do goBarber na versão mobile (APP) também é necessário que o backend (API) do projeto esteja iniciada e em execução, tambem certifique-se de ter um ambiente configurado para executar um emulador de smartphone em seu computador, em minha máquina eu utilizei um emulador android do proprio android estudio, o AVD (Android Virtual Device) utilize uma vm com no minímo android Pie 9 ou mais atualizado, e uma versao tambem com acesso a google play, no meu exemplo eu utilizei uma vm do **_Google Pixel 3a_**
 
