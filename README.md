@@ -1,12 +1,11 @@
 <div align="center" style="margin-bottom: 20px;">
-<img alt="gobarber" src=".assets/images/logo.png" width="auto" heigth="auto"/>
+<img alt="gobarber" src="./assets/images/logo.png" width="auto" heigth="auto"/>
 </div>
 
 <div align="center" style="margin: 20px;">
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jefferson1104/goBarber/LICENSE.md)
 ![GitHub top language](https://img.shields.io/github/languages/top/jefferson1104/gobarber?style=flat-square)
-
 
 <p align="center" >
   <a href="#fire-prévia-da-aplicação"> :fire: Prévia da Aplicação</a> |
@@ -39,13 +38,14 @@ O projeto foi feito com as seguintes tecnologias:
 - [JWT](https://jwt.io/)
 - [Yup](https://github.com/jquense/yup)
 - [Styled-Components](https://styled-components.com/)
-{...}
+  {...}
 
 ## :hammer: Deploy da Aplicação
+
 {...}
 
-
 ## :thinking: Como Contribuir?
+
 **Faça um fork deste repositório**
 
 ```bash
@@ -65,12 +65,16 @@ $ git push origin minha-branch
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
 ## :zap: Executando o Projeto
+
 #### Clonando o projeto
+
 ```sh
 $ git clone https://github.com/jefferson1104/goBarber.git
 $ cd gobarber
 ```
+
 #### Iniciando a API
+
 ```sh
 $ cd api
 
@@ -86,11 +90,14 @@ $ yarn && yarn typeorm migration:run && yarn dev:server
 <a href="https://insomnia.rest/run/?label=gobarber-jvictorfarias&uri=https%3A%2F%2Fgithub.com%2Fjvictorfarias%2FGoBarber%2Fblob%2Fmaster%2Fapi%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
 #### Iniciando o Frontend
+
 ```sh
 $ cd web
 $ yarn && yarn start
 ```
+
 #### Iniciando o Mobile(Android)
+
 ```sh
 $ cd mobile
 $ yarn && yarn android && yarn start

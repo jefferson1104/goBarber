@@ -14,7 +14,7 @@ export default {
 
   defaults: {
     from: {
-      email: 'adm@startflix.net',
+      email: 'contact@example.com',
       name: 'Equipe GoBarber',
     }
   }
