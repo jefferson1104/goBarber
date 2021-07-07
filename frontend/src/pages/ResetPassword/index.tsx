@@ -102,7 +102,7 @@ const SignIn: React.FC = () => {
               placeholder="Confirmação da senha"
             />
 
-            <Button type="submit">Alterar Senha</Button>
+            <Button type="submit">Alterar senha</Button>
           </Form>
         </AnimationContainer>
       </Content>
