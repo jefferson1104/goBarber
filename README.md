@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 20px;">
-  <img alt="gobarber" src="./assets/images/logo.png" width="auto" heigth="auto"/>
+  <img alt="gobarber" src="./assets/images/goBarber-logo.svg" width="auto" heigth="auto"/>
 </div>
 
 <p align="center">
@@ -7,17 +7,15 @@
 
   <img alt="technology" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 
-  <img alt="technology" src="https://img.shields.io/badge/React_Native-8633FF?style=for-the-badge&logo=react&logoColor=61DAFB">
+  <img alt="technology" src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 </p>
 
 #### :barber: O projeto
 
 Aplicativo de agendamento para barbearia, conta com uma api construida com DDD e TDD, uma versão web para consultas e o aplicativo mobile para android/ios.
 
-#### :fire: Prévia da Aplicação
-
 <div align="center"> 
-  <img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
+  <img src="./assets/images/preview.gif" alt="preview"/>
 </div>
 
 #### :rocket: Principais tecnologias
@@ -58,18 +56,9 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 #### 🎨 Screenshots
 
 <p align="center">
-  <img width=500 src="./assets/images/screenshots/screenshot_web_01.png">
-  <img width=500 src="./assets/images/screenshots/screenshot_web_02.png">
-  <img width=500 src="./assets/images/screenshots/screenshot_web_03.png">
-  <img width=500 src="./assets/images/screenshots/screenshot_web_04.png">
-</p>
-
-<p align="center">
-  <img width=150 src="./assets/images/screenshots/screenshot_mobile_01.png">
-  <img width=150 src="./assets/images/screenshots/screenshot_mobile_02.png">
-  <img width=150 src="./assets/images/screenshots/screenshot_mobile_03.png">
-  <img width=150 src="./assets/images/screenshots/screenshot_mobile_04.png">
-  <img width=150 src="./assets/images/screenshots/screenshot_mobile_05.png">
+  <a href='./assets/images/screenshots/'>
+    <img width=600 src="./assets/images/gobarber-screens.png">
+  </a>
 </p>
 
 ### :memo: Licença
