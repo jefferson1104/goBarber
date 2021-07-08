@@ -63,7 +63,13 @@ const Dashboard: React.FC = () => {
         <ProfileButton
           onPress={navigateToProfile} // executa uma funcao
         >
-          <UserAvatar source={{ uri: user.avatar_url }} />
+          <UserAvatar
+            source={{
+              uri:
+                user.avatar_url ||
+                'https://i.ibb.co/j3nfdYY/avatar-default.jpg',
+            }}
+          />
         </ProfileButton>
       </Header>
 
@@ -77,7 +83,13 @@ const Dashboard: React.FC = () => {
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)} // executa uma funcao enviando um parametro
           >
-            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            <ProviderAvatar
+              source={{
+                uri:
+                  provider.avatar_url ||
+                  'https://i.ibb.co/j3nfdYY/avatar-default.jpg',
+              }}
+            />
 
             <ProviderInfo>
               <ProviderName>{provider.name}</ProviderName>

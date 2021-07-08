@@ -30,6 +30,7 @@ import {
   BackButton,
   UserAvatarButton,
   UserAvatar,
+  CameraAvatarButton,
   UploadButton,
 } from './styles';
 import { useAuth } from '../../hooks/auth';
@@ -200,7 +201,16 @@ const SignUp: React.FC = () => {
             </BackButton>
 
             <UserAvatarButton onPress={toggleModal}>
-              <UserAvatar source={{ uri: user.avatar_url }} />
+              <UserAvatar
+                source={{
+                  uri:
+                    user.avatar_url ||
+                    'https://i.ibb.co/j3nfdYY/avatar-default.jpg',
+                }}
+              />
+              <CameraAvatarButton>
+                <Icon name="camera" size={32} color="#ff9000" />
+              </CameraAvatarButton>
             </UserAvatarButton>
 
             <View>
