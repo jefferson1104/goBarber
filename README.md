@@ -10,15 +10,17 @@
   <img alt="technology" src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 </p>
 
-#### :barber: O projeto
+### :barber: O projeto
 
-Aplicativo de agendamento para barbearia, conta com uma api construida com DDD e TDD, uma versão web para consultas e o aplicativo mobile para android/ios.
+Aplicativo de agendamento para barbearia, conta com um back-end (API) Node.js construido com DDD e TDD, com um Front-end desenvolvido com a biblioteca React.js utilizando boas práticas e testes com a biblioteca jest e também um versão mobile desenvolvido com React Native.
 
-<div align="center"> 
-  <img src="./assets/images/preview.gif" alt="preview"/>
-</div>
+<p align="center">
+  <a href='./assets/images/screenshots/'>
+    <img width=600 src="./assets/images/gobarber-screens.png">
+  </a>
+</p>
 
-#### :rocket: Principais tecnologias
+### :zap: Principais tecnologias
 
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [NodeJS](https://nodejs.org/en/)
@@ -29,17 +31,19 @@ Aplicativo de agendamento para barbearia, conta com uma api construida com DDD e
 - [JWT](https://jwt.io/)
 - [Styled-Components](https://styled-components.com/)
 
-#### :zap: Como executar este projeto
+### :rocket: Código fonte (Repositórios)
 
-No arquivo [NOTES](./NOTES.md) contém todas as instruções para você conseguir executar este projeto, nele eu coloquei cada detalhe de como executar a api, criar os bancos de dados em containers, iniciar o frontend e o aplicativo mobile.
+- [Back-end (API) do projeto.](https://github.com/jefferson1104/gobarber-nodejs)
+- [Front-end do projeto.](https://github.com/jefferson1104/gobarber-reactjs)
+- [Mobile do projeto.](https://github.com/jefferson1104/gobarber-react-native)
 
-#### :thinking: Como Contribuir?
+### :thinking: Como Contribuir?
 
-**Faça um fork deste repositório**
+**Faça um fork do repositório de back-end, front-end ou mobile**
 
 ```bash
 # Clone o seu fork
-$ git clone url-do-seu-fork && cd gobarber
+$ git clone url-do-seu-fork
 
 # Crie uma branch com sua feature ou correção de bugs
 $ git checkout -b minha-branch
@@ -52,14 +56,6 @@ $ git push origin minha-branch
 ```
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-#### 🎨 Screenshots
-
-<p align="center">
-  <a href='./assets/images/screenshots/'>
-    <img width=600 src="./assets/images/gobarber-screens.png">
-  </a>
-</p>
 
 ### :memo: Licença
 
