@@ -1,27 +1,22 @@
 <div align="center" style="margin-bottom: 20px;">
   <img alt="gobarber" src="./assets/images/goBarber-logo.svg" width="auto" heigth="auto"/>
+  <p align="center">
+    <img alt="technology" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+    <img alt="technology" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+    <img alt="technology" src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+  </p>
 </div>
 
-<p align="center">
-  <img alt="technology" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+### :barber: About project
+Scheduling application for barbershop, has a back-end (API) Node.js built with DDD and TDD, with a Front-end developed with the React.js library using good practices and tests with the jest library and also a mobile version developed with React Native.
 
-  <img alt="technology" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-
-  <img alt="technology" src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-</p>
-
-### :barber: O projeto
-
-Aplicativo de agendamento para barbearia, conta com um back-end (API) Node.js construido com DDD e TDD, com um Front-end desenvolvido com a biblioteca React.js utilizando boas práticas e testes com a biblioteca jest e também um versão mobile desenvolvido com React Native.
-
-<p align="center">
+<div align="center">
   <a href='./assets/images/screenshots/'>
     <img width=600 src="./assets/images/gobarber-screens.png">
   </a>
-</p>
+</div>
 
-### :zap: Principais tecnologias
-
+### :zap: Main technologies
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [NodeJS](https://nodejs.org/en/)
 - [ReactJS](https://pt-br.reactjs.org/)
@@ -31,32 +26,27 @@ Aplicativo de agendamento para barbearia, conta com um back-end (API) Node.js co
 - [JWT](https://jwt.io/)
 - [Styled-Components](https://styled-components.com/)
 
-### :rocket: Código fonte (Repositórios)
-
+### :rocket: Repositories (source code)
 - [Back-end (API) do projeto.](https://github.com/jefferson1104/gobarber-nodejs)
 - [Front-end do projeto.](https://github.com/jefferson1104/gobarber-reactjs)
 - [Mobile do projeto.](https://github.com/jefferson1104/gobarber-react-native)
 
-### :thinking: Como Contribuir?
+### :thinking: How to Contribute?
 
-**Faça um fork do repositório de back-end, front-end ou mobile**
+**Fork the back-end, front-end or mobile repository**
 
 ```bash
-# Clone o seu fork
+# clone your fork
 $ git clone url-do-seu-fork
 
-# Crie uma branch com sua feature ou correção de bugs
+# Create a branch with your feature or bug fix
 $ git checkout -b minha-branch
 
-# Faça o commit das suas alterações
+# Commit your changes
 $ git commit -m 'feature/bugfix: minhas alterações'
 
-# Faça o push para a sua branch
+# Push to your branch
 $ git push origin minha-branch
 ```
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-### :memo: Licença
-
-Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
+Once your pull request has been merged, you can delete your branch.
